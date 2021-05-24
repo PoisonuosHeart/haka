@@ -1,0 +1,15 @@
+section.photo__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 82vh;
+    background-image: url('/assets/img/NeuroFlowBack.svg');
+    
+    .preview {
+        width: 150px;
+        height: 250px;
+        background: red;
+    }
+}

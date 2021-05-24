@@ -1,0 +1,57 @@
+@import '_adaptivity';
+
+$main_color: #010BEE;
+$second_color: #BA4444;
+
+section.logo__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 82vh;
+    background-image: url('/assets/img/Ellipse 1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    .logo__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        width: 281px; 
+        height: 320px;
+        background-image:url('/assets/img/logo.svg');
+        background-repeat: no-repeat;
+    }
+
+    .logo__text {
+        display: flex;
+        transform: translateY(-7%);
+        font-family: 'MuseoModerno', cursive;
+        font-weight: bold;
+        font-weight: 500;
+        font-size: 200px;
+        color: #ffff;
+    }
+
+    .logo__text::before {
+        content: 'We know you';
+        position: relative;
+        left: 14px;
+        bottom: 80px;
+        font-size: 10px;
+        font-family: 'Museo Sans Cyrl';
+        font-weight: 400;
+        display: block;
+        color: #ffff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+}
+
+
+
+
+
+
+
+

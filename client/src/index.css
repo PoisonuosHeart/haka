@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url("./assets/fonts/MuseoModerno-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url("./assets/fonts/MuseoModerno-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url("./assets/fonts/MuseoModerno-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url("./assets/fonts/ofont.ru_Museo Sans Cyrl 500.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-Thin.ttf");
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #010BEE;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+header ul.nav__list li {
+  margin: calc(30px + 30 * ((100vw - 320px) / 1600));
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+header ul.nav__list a {
+  font-family: 'MuseoModerno', cursive;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+}
+
+section.logo__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 82vh;
+  background-image: url("./assets/img/Ellipse 1.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+section.logo__section .logo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 281px;
+  height: 320px;
+  background-image: url("./assets/img/logo.svg");
+  background-repeat: no-repeat;
+}
+
+section.logo__section .logo__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-7%);
+          transform: translateY(-7%);
+  font-family: 'MuseoModerno', cursive;
+  font-weight: bold;
+  font-weight: 500;
+  font-size: 200px;
+  color: #ffff;
+}
+
+section.logo__section .logo__text::before {
+  content: 'We know you';
+  position: relative;
+  left: 14px;
+  bottom: 80px;
+  font-size: 10px;
+  font-family: 'Museo Sans Cyrl';
+  font-weight: 400;
+  display: block;
+  color: #ffff;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url("./assets/fonts/MuseoModerno-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url("./assets/fonts/MuseoModerno-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url("./assets/fonts/MuseoModerno-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url("./assets/fonts/ofont.ru_Museo Sans Cyrl 500.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("./assets/fonts/Montserrat-Thin.ttf");
+}
+
+section.descr__section {
+  width: 100%;
+  min-height: 82vh;
+  background-image: url("./assets/img/NeuroFlow.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-top: 7rem;
+  padding-top: 10rem;
+}
+
+section.descr__section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.descr__section ul li:nth-child(1) {
+  font-weight: 600;
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+section.descr__section ul li:not(:nth-child(1)) {
+  padding-top: 3px;
+  font-size: 30px;
+  color: #010BEE;
+}
+
+section.descr__section ul li:last-child {
+  padding-top: 15px;
+  color: #000000;
+}
+
+section.descr__section ul li {
+  font-family: 'Montserrat', sans-serif;
+}
+
+section.photo__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 82vh;
+  background-image: url("./assets/img/NeuroFlowBack.svg");
+}
+
+section.photo__section .preview {
+  width: 150px;
+  height: 250px;
+  background: red;
+}
+
+section.footer__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 82vh;
+  background-image: url("./assets/img/Ellipse 63.svg");
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+section.footer__section h2 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+section.footer__section h3 {
+  font-size: 29px;
+  margin: 50px 0 50px 0;
+}
+
+section.footer__section p {
+  width: 40%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+section.footer__section p span {
+  font-weight: 700;
+  font-size: larger;
+}
+
+section.footer__section .busin__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 40px;
+  margin-top: 35px;
+  outline: none;
+  background: #EDC22B;
+  color: #000000;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+section.footer__section .busin__btn span {
+  font-weight: 700;
+  margin-left: 5px;
+}
+/*# sourceMappingURL=styles.css.map */

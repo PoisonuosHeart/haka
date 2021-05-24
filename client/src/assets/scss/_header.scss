@@ -1,0 +1,33 @@
+@import '_adaptivity';
+
+
+$main_color: #010BEE;
+$second_color: #BA4444;
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $main_color;
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    ul.nav__list {
+        display: flex;
+        margin-top: 1rem;
+        li {
+            @include adaptive-value('margin', 60, 30, 0);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        a {
+            font-family: 'MuseoModerno', cursive;
+            font-weight: 400;
+            font-size: 16px;
+            color: white;
+        }
+    }
+}
